@@ -1,0 +1,16 @@
+baseURL: ""
+languageCode: en-us
+title: My Blog
+theme: PaperMod
+
+params:
+  homeInfoParams:
+    Title: "👋 Hello Stranger"
+    Content: Hi, Welcome to my blog. This is Harsh, I’m documenting my learning notes in this blog. Here you'll find a lot of cool information about a lot of cool stuff.
+  socialIcons:
+    - name: website
+      url: "https://harshkumarkhatri.me/"
+    - name: github
+      url: "https://github.com/"
+    - name: linkedin
+      url: "https://linkedin.com/"
