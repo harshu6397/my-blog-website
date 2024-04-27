@@ -1,4 +1,5 @@
 name: Publish to GH Pages
+
 on:
   push:
     branches:
@@ -13,6 +14,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           submodules: true
+          node-version: '20'
 
       - name: Checkout destination
         uses: actions/checkout@v3
@@ -24,7 +26,8 @@ jobs:
       - name: Setup Hugo
         run: |
           curl -L -o /tmp/hugo.tar.gz 'https://github.com/gohugoio/hugo/releases/download/v0.110.0/hugo_extended_0.110.0_linux-amd64.tar.gz'
-          tar -C ${RUNNER_TEMP} -zxvf /tmp/hugo.tar.gz hugo          
+          tar -C ${RUNNER_TEMP} -zxvf /tmp/hugo.tar.gz hugo
+
       - name: Build
         run: ${RUNNER_TEMP}/hugo
 
@@ -37,4 +40,4 @@ jobs:
           git config user.name 'harshu6397'
           git config user.email 'harshkumarkardam258@gmail.com'
           git commit -m 'Updated site'
-          git push  
+          git push
